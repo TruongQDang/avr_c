@@ -122,7 +122,9 @@ int main()
                                 need_post_processing = 0;
                         }
 
-                        if (gpio_read('D',2) == GPIO_LOW && record_done && record_button_released) {
+                        if (gpio_read('D',2) == GPIO_LOW 
+                                && record_done 
+                                && record_button_released) {
                                 record_done = 0;
                                 index = 0;     
                                 record_button_released = 0;   
