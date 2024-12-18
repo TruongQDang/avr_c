@@ -85,7 +85,9 @@ int main()
 
         while (1) {
                 if (mode == PLAYBACK_MODE) {
-                        if (gpio_read('D',3) == GPIO_LOW && playback_done && playback_button_released) {
+                        if (gpio_read('D',3) == GPIO_LOW 
+                                && playback_done 
+                                && playback_button_released) {
                                 playback_done = 0;
                                 playback_button_released = 0;
                                 gpio_write('C',3,GPIO_LOW);
